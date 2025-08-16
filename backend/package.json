@@ -5,11 +5,13 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "build": "prisma generate",
     "dev": "nodemon server.js",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
     "db:studio": "prisma studio",
-    "db:seed": "node seed.js"
+    "db:seed": "node seed.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "express": "^4.18.2",
